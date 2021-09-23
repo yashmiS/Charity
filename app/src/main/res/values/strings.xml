@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AnonymousCharityApp</string>
+
+    <string-array name="projectTypes">
+        <item>Select a project type</item>
+        <item>Animal</item>
+        <item>Social</item>
+    </string-array>
 </resources>
