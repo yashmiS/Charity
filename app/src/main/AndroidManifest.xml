@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.anonymouscharityapp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AnonymousCharityApp">
+
+        <activity
+            android:name=".Profile"
+            android:exported="true" />
+        <activity
+            android:name=".SlipUploard"
+            android:exported="true" />
+        <activity
+            android:name=".CardDetails"
+            android:exported="true" />
+        <activity
+            android:name=".PaymentMethod"
+            android:exported="true" />
+        <activity
+            android:name=".home"
+            android:exported="true" />
         <activity
             android:name=".Donations"
             android:exported="true" />
@@ -20,7 +38,10 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"/>
+        <activity
+                android:name=".Request"
+                android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
