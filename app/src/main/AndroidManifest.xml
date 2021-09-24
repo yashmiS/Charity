@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AnonymousCharityApp">
         <activity
+            android:name=".Donations"
+            android:exported="true" />
+        <activity
+            android:name=".Blog"
+            android:exported="true" />
+        <activity
             android:name=".Registeruser"
             android:exported="true" />
         <activity
