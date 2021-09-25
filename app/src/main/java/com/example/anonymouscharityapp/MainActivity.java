@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         regpage = findViewById(R.id.regpage);
         regpage.setOnClickListener(this);
 
-        logbtn=findViewById(R.id.logbutton);
+        logbtn = findViewById(R.id.logbutton);
         logbtn.setOnClickListener(this);
 
         logEmail = findViewById(R.id.logemail);
