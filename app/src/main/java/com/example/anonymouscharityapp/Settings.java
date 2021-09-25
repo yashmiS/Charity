@@ -32,7 +32,7 @@ public class Settings extends AppCompatActivity {
 //        feedback.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                Intent intent = new Intent(Settings.this,feedback.Class());
+//                Intent intent = new Intent(Settings.this,Feedback.Class());
 //                  startActivity(intent);
 //            }
 //        });

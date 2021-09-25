@@ -1,8 +1,10 @@
 package com.example.anonymouscharityapp;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +31,10 @@ public class CardDetails extends AppCompatActivity {
     private String userId;
     private Button Cancel;
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +50,14 @@ public class CardDetails extends AppCompatActivity {
         });
 
 
+
+
+
+
+
+
+
+
         mAuth = FirebaseAuth.getInstance();
         if (mAuth.getCurrentUser() == null) {
             startActivity(new Intent(CardDetails.this, MainActivity.class));
@@ -56,7 +70,12 @@ public class CardDetails extends AppCompatActivity {
         cvn = findViewById(R.id.filledTextField3);
 
 
+
+
         donatebutton = findViewById(R.id.donateButton);
+
+
+
         root = FirebaseDatabase.getInstance().getReference();
         donatebutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,12 +120,15 @@ public class CardDetails extends AppCompatActivity {
                 root.child("card details").child(userId).setValue(card).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Toast.makeText(CardDetails.this, "Thank You!!!...", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CardDetails.this, "Thank You for !!!...", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(CardDetails.this, PaymentMethod.class));
                     }
                 });
 
             }
+
+
         });
     }
+
 }

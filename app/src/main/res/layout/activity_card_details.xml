@@ -25,15 +25,14 @@
                 android:orientation="vertical">
 
 
-
                 <ImageView
                     android:id="@+id/imageView"
-                    android:src="@drawable/paymentlogo"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="321dp"
+                    android:layout_height="202dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginTop="0dp"/>
+                    android:src="@drawable/paymentlogo" />
 
                 <TextView
                     android:text="Card Payment Details"
@@ -67,6 +66,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:id="@+id/filledTextField01"
+                        android:layout_marginTop="10dp"
                         android:drawableStart="@drawable/ic_money"
                         android:drawablePadding="10dp"
                         android:layout_height="wrap_content"
