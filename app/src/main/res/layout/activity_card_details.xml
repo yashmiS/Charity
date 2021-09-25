@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="#FFBB86FC"
+        tools:context=".CardDetails">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:elevation="10dp"
+            android:background="#FFBB86FC">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:src="@drawable/paymentlogo"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="0dp"/>
+
+                <TextView
+                    android:text="Card Payment Details"
+                    android:layout_width="match_parent"
+                    android:textColor="#FF000000"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Donation Amount"
+                    app:endIconMode="clear_text"
+                    android:layout_marginBottom="20dp">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/filledTextField01"
+                        android:drawableStart="@drawable/ic_money"
+                        android:drawablePadding="10dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Card Holder Name"
+                    android:layout_marginBottom="20dp"
+                    app:endIconMode="clear_text">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/filledTextField0"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_identity"
+                        android:layout_height="match_parent"
+                        android:inputType="textCapCharacters" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Card Number"
+                        app:endIconMode="clear_text"
+                        app:counterEnabled="true"
+                        android:layout_marginBottom="10dp"
+                        app:counterMaxLength="16">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:id="@+id/filledTextField1"
+                            android:drawablePadding="10dp"
+                            android:drawableStart="@drawable/ic_credit_card"
+                            android:layout_height="match_parent"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Expiration Date: Ex 0921"
+                    app:endIconMode="clear_text"
+                    android:layout_marginRight="140dp"
+                    android:layout_marginBottom="10dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="4"
+                    app:errorEnabled="true">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/filledTextField2"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_date"
+                        android:layout_height="match_parent"
+                        android:inputType="number" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="CVN"
+                    app:endIconMode="password_toggle"
+                    app:counterEnabled="true"
+                    android:layout_marginRight="140dp"
+                    android:layout_marginBottom="10dp"
+                    app:counterMaxLength="3"
+                    app:errorEnabled="true">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/filledTextField3"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_cvn"
+                        android:layout_height="match_parent"
+                        android:inputType="numberPassword" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/donateButton"
+                    android:text="Donate Now"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#ffff"
+                    android:layout_width="200dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                </Button>
+                <Button
+                    android:id="@+id/Cancel"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="50dp"
+                    android:textColor="#ffff"
+                    android:layout_width="200dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                </Button>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>

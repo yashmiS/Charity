@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_myfeed"
+        android:title="Home"/>
+    <item
+        android:id="@+id/event"
+        android:icon="@drawable/ic_event"
+        android:title="Ongoing Events"/>
+    <item
+        android:id="@+id/compatible"
+        android:icon="@drawable/compatible"
+        android:title="Settings"/>
+
+    <item android:title="Project Types">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/social"
+                    android:icon="@drawable/ic_social"
+                    android:title="Social"/>
+                <item
+                android:id="@+id/animal"
+                android:icon="@drawable/ic_animal"
+                android:title="Animal"/>
+
+            </group>
+        </menu>
+
+    </item>
+    <item android:title="Actions">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/profile"
+                    android:icon="@drawable/ic_person"
+                    android:title="Profile"/>
+                <item
+                    android:id="@+id/notification"
+                    android:icon="@drawable/ic_notifications"
+                    android:title="Notifications"/>
+                <item
+                    android:id="@+id/logout"
+                    android:icon="@drawable/ic_logout"
+                    android:title="Log Out"/>
+
+            </group>
+        </menu>
+
+    </item>
+    <item android:title="Communicate">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/about"
+                    android:icon="@drawable/ic_about"
+                    android:title="About Us"/>
+                <item
+                    android:id="@+id/feedback"
+                    android:icon="@drawable/ic_feedback"
+                    android:title="Feedback"/>
+                <item
+                    android:id="@+id/contactUs"
+                    android:icon="@drawable/ic_contactus"
+                    android:title="Contact Us"/>
+
+            </group>
+        </menu>
+
+    </item>
+
+</menu>
