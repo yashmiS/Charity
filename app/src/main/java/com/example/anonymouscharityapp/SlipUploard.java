@@ -127,7 +127,7 @@ public class SlipUploard extends AppCompatActivity {
                                 public void run() {
                                     mProgressBar.setProgress(0);
                                 }
-                            },5000);
+                            },2000);
                             Toast.makeText(SlipUploard.this, "Upload successful",Toast.LENGTH_LONG).show();
                             Upload upload = new Upload(mEditTextFileName.getText().toString().trim(),
                                     taskSnapshot.toString());
