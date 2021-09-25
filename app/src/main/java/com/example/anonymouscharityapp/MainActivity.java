@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onComplete(@NonNull Task<AuthResult> task) {
                if(task.isSuccessful()){
                    //redirect to home page
-                   startActivity(new Intent(MainActivity.this, Profile.class));
+                   startActivity(new Intent(MainActivity.this,PaymentMethod.class));
                }else{
                    Toast.makeText(MainActivity.this, "Failed to Login", Toast.LENGTH_LONG).show();
                }

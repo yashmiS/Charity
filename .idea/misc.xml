@@ -5,6 +5,15 @@
       <map>
         <entry key="..\:/Users/HP/AndroidStudioProjects/AnonymousCharityApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/AnonymousCharityApp/app/src/main/res/layout/activity_registeruser.xml" value="0.1897644927536232" />
+        <entry key="..\:/Users/ngt/AndroidStudioProjects/AnonymousCharityApp/app/src/main/res/drawable/bg_round.xml" value="0.1" />
+        <entry key="..\:/Users/ngt/AndroidStudioProjects/AnonymousCharityApp/app/src/main/res/layout/activity_card_details.xml" value="0.22" />
+        <entry key="..\:/Users/ngt/AndroidStudioProjects/AnonymousCharityApp/app/src/main/res/layout/activity_help_center.xml" value="0.18" />
+        <entry key="..\:/Users/ngt/AndroidStudioProjects/AnonymousCharityApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/ngt/AndroidStudioProjects/AnonymousCharityApp/app/src/main/res/layout/activity_payment_method.xml" value="0.16" />
+        <entry key="..\:/Users/ngt/AndroidStudioProjects/AnonymousCharityApp/app/src/main/res/layout/activity_privacy_policy.xml" value="0.1" />
+        <entry key="..\:/Users/ngt/AndroidStudioProjects/AnonymousCharityApp/app/src/main/res/layout/activity_registeruser.xml" value="0.1" />
+        <entry key="..\:/Users/ngt/AndroidStudioProjects/AnonymousCharityApp/app/src/main/res/layout/activity_settings.xml" value="0.18" />
+        <entry key="..\:/Users/ngt/AndroidStudioProjects/AnonymousCharityApp/app/src/main/res/layout/activity_slip_uploard.xml" value="0.16" />
       </map>
     </option>
   </component>
@@ -13,5 +22,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
   </component>
 </project>
