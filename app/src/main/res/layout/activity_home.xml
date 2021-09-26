@@ -26,16 +26,73 @@
                 <androidx.coordinatorlayout.widget.CoordinatorLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                        <ProgressBar
-                            android:id="@+id/progressbar"
-                            android:layout_gravity="center_vertical|center_horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+
 
                         <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/recycleView"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"/>
+
+                        <ViewFlipper
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/v_flipper"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="250dp"
+
+                            android:text="Description about the project"
+                            android:textColor="#000"
+                            android:textSize="20sp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="300dp"
+                            android:text="Education and Schooling support for children living in developing countries. Find out where and how Classroom of Hope helps Children with Education. Making A Difference. Unique Solutions."
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="450dp"
+                            android:text="Our Mission"
+                            android:textColor="#000"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="550dp"
+                            android:text="'We walk with those who need food, housing, community resources
+                             or addition treatment'"
+                            android:textColor="#9254de"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            />
+                        <Button
+                            android:id="@+id/projectButton"
+                            android:text="Donate "
+                            android:textAllCaps="false"
+                            android:layout_marginTop="45dp"
+                            android:layout_marginLeft="250dp"
+                            android:layout_gravity="center"
+                            android:textColor="#fff"
+                            android:textSize="12dp"
+                            android:background="@drawable/button_background"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"/>
+
+
+
+
+
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
         </LinearLayout>
 

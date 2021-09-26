@@ -14,22 +14,27 @@
         android:icon="@drawable/compatible"
         android:title="Settings"/>
 
-    <item android:title="Project Types">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/social"
-                    android:icon="@drawable/ic_social"
-                    android:title="Social"/>
-                <item
-                android:id="@+id/animal"
-                android:icon="@drawable/ic_animal"
-                android:title="Animal"/>
+    <item
+        android:id="@+id/blog"
+        android:icon="@drawable/ic_social"
+        android:title="Blog"/>
 
-            </group>
-        </menu>
+<!--    <item android:title="Project Types">-->
+<!--        <menu>-->
+<!--            <group android:checkableBehavior="single">-->
+<!--                <item-->
+<!--                    android:id="@+id/social"-->
+<!--                    android:icon="@drawable/ic_social"-->
+<!--                    android:title="Social"/>-->
+<!--                <item-->
+<!--                android:id="@+id/animal"-->
+<!--                android:icon="@drawable/ic_animal"-->
+<!--                android:title="Animal"/>-->
 
-    </item>
+<!--            </group>-->
+<!--        </menu>-->
+
+<!--    </item>-->
     <item android:title="Actions">
         <menu>
             <group android:checkableBehavior="single">
