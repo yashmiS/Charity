@@ -13,6 +13,15 @@
         android:theme="@style/Theme.AnonymousCharityApp">
         <activity
             android:name=".OngoingEvents"
+            android:exported="true"/>
+        <activity
+            android:name=".HelpCenter"
+            android:exported="true" />
+        <activity
+            android:name=".PrivacyPolicy"
+            android:exported="true" />
+        <activity
+            android:name=".Settings"
             android:exported="true" />
         <activity
             android:name=".Profile"
@@ -28,6 +37,12 @@
             android:exported="true" />
         <activity
             android:name=".home"
+            android:exported="true" />
+        <activity
+            android:name=".Donations"
+            android:exported="true" />
+        <activity
+            android:name=".Blog"
             android:exported="true" />
         <activity
             android:name=".Registeruser"
