@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.wifi.hotspot2.pps.HomeSp;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -91,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     //redirect to home page
-                    startActivity(new Intent(MainActivity.this, Profile.class));
+                    startActivity(new Intent(MainActivity.this, home.class));
                 }else{
                     Toast.makeText(MainActivity.this, "Failed to Login", Toast.LENGTH_LONG).show();
                 }
