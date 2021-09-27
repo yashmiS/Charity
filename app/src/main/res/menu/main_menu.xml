@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/home"
         android:icon="@drawable/ic_myfeed"
         android:title="Home"/>
     <item
+
         android:id="@+id/event"
         android:icon="@drawable/ic_event"
         android:title="Ongoing Events"/>
@@ -19,22 +21,7 @@
         android:icon="@drawable/ic_social"
         android:title="Blog"/>
 
-<!--    <item android:title="Project Types">-->
-<!--        <menu>-->
-<!--            <group android:checkableBehavior="single">-->
-<!--                <item-->
-<!--                    android:id="@+id/social"-->
-<!--                    android:icon="@drawable/ic_social"-->
-<!--                    android:title="Social"/>-->
-<!--                <item-->
-<!--                android:id="@+id/animal"-->
-<!--                android:icon="@drawable/ic_animal"-->
-<!--                android:title="Animal"/>-->
 
-<!--            </group>-->
-<!--        </menu>-->
-
-<!--    </item>-->
     <item android:title="Actions">
         <menu>
             <group android:checkableBehavior="single">
@@ -45,11 +32,16 @@
                 <item
                     android:id="@+id/notification"
                     android:icon="@drawable/ic_notifications"
-                    android:title="Notifications"/>
+                    android:title="Completed Events"/>
                 <item
                     android:id="@+id/logout"
                     android:icon="@drawable/ic_logout"
                     android:title="Log Out"/>
+                <item
+                    android:id="@+id/requestForm"
+                    android:icon="@drawable/ic_form"
+                    android:title="Log Out"/>
+
 
             </group>
         </menu>
@@ -61,7 +53,7 @@
                 <item
                     android:id="@+id/about"
                     android:icon="@drawable/ic_about"
-                    android:title="About Us"/>
+                    android:title="Donations"/>
                 <item
                     android:id="@+id/feedback"
                     android:icon="@drawable/ic_feedback"

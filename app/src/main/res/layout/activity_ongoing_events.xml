@@ -40,15 +40,26 @@
         android:layout_marginTop="100dp"/>
 
 
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/nav_view"
-            app:menu="@menu/example_menu"
-            android:layout_gravity="start"
-            android:layout_marginTop="0dp"
-            app:itemIconTint="@drawable/navigation_selector"
-            app:itemTextColor="@drawable/navigation_view_item_selected"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+<!--        <com.google.android.material.navigation.NavigationView-->
+<!--            android:id="@+id/nav_view"-->
+<!--            app:menu="@menu/example_menu"-->
+<!--            android:layout_gravity="start"-->
+<!--            android:layout_marginTop="0dp"-->
+<!--            app:itemIconTint="@drawable/navigation_selector"-->
+<!--            app:itemTextColor="@drawable/navigation_view_item_selected"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+        <SearchView
+            android:id="@+id/d_search"
+            android:layout_width="241dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"/>
+
+
+
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

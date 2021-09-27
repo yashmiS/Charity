@@ -37,7 +37,7 @@ public class OngoingEvents extends AppCompatActivity {
     private RecyclerView recycleView;
     private ArrayList<Project> projectList;
     private ProjectAdapter projectAdapter;
-
+    private SearchView search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,17 +46,13 @@ public class OngoingEvents extends AppCompatActivity {
 
 
         recycleView = findViewById(R.id.recycleView5);
-//        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-//        layoutManager.setReverseLayout(true);
-//        layoutManager.setStackFromEnd(true);
+
 
         recycleView.setHasFixedSize(true);
         recycleView.setLayoutManager(new LinearLayoutManager(this));
 
         projectList = new ArrayList<>();
-        projectAdapter = new ProjectAdapter(OngoingEvents.this, projectList);
 
-        recycleView.setAdapter(projectAdapter);
 
         if (FirebaseAuth.getInstance().getCurrentUser() == null) {
             startActivity(new Intent(OngoingEvents.this, MainActivity.class));
@@ -64,6 +60,7 @@ public class OngoingEvents extends AppCompatActivity {
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference()
                 .child("request");
+
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -82,11 +79,13 @@ public class OngoingEvents extends AppCompatActivity {
                         Project project = new Project(requestTitle, requestLocation, requestStartDate, requestDescription);
                         projectList.add(project);
                     }
+                    projectAdapter = new ProjectAdapter(OngoingEvents.this, projectList);
 
+                    recycleView.setAdapter(projectAdapter);
                     projectAdapter.notifyDataSetChanged();
                 }
 
-
+            }
 //     DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("request");
 //     Query query = reference.orderByChild("uid").equalTo("uid");
 //     query.addValueEventListener(new ValueEventListener() {
@@ -110,7 +109,7 @@ public class OngoingEvents extends AppCompatActivity {
 //         }
 //     });
 
-            }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -118,45 +117,25 @@ public class OngoingEvents extends AppCompatActivity {
             }
         });
 
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.example_menu, menu);
-
-        MenuItem searchItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) searchItem.getActionView();
-
-        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        search = (SearchView) findViewById(R.id.d_search);
+        search.setQueryHint("title");
+        search.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public boolean onQueryTextSubmit(String Query) {
+            public boolean onQueryTextSubmit(String s) {
+
                 return false;
             }
 
             @Override
-            public boolean onQueryTextChange(String nextText) {
-                projectAdapter.getFilter().filter(nextText);
+            public boolean onQueryTextChange(String s) {
+                projectAdapter.getFilter().filter(s);
                 return false;
             }
         });
-        return true;
+
+
     }
 
 
-//    Map<String, Object> map = new HashMap<>();
-//map.put("requestStartDate", ServerValue.TIMESTAMP);
-//ref.child("request").updateChildren(map);
-//    public static String getTimeDate(long timeStamp){
-//        try{
-//            DateFormat dateFormat = getDateTimeInstance();
-//            Date netDate = (new Date(timeStamp));
-//            return dateFormat.format(netDate);
-//        } catch(Exception e) {
-//            return "requestStartDate";
-//        }
-//    }
 }
