@@ -37,7 +37,7 @@ public class Contactus extends AppCompatActivity {
                 .addYoutube("www.youtube.com")   //Enter your youtube link here (replace with my channel link)
                 .addPlayStore("com.example.yourprojectname")//Replace all this with your package name
                 .addFacebook("www.facebook.com")
-                .addInstagram("jarves.usaram")    //Your instagram id
+                .addInstagram("https://www.instagram.com/accounts/login/")    //Your instagram id
                 .create();
         setContentView(aboutPage);
     }

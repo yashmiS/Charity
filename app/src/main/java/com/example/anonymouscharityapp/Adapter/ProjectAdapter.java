@@ -1,6 +1,7 @@
 package com.example.anonymouscharityapp.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.anonymouscharityapp.Model1.Project;
+import com.example.anonymouscharityapp.OngoingEvents;
+import com.example.anonymouscharityapp.PaymentMethod;
 import com.example.anonymouscharityapp.R;
 
 import java.util.ArrayList;
@@ -110,8 +113,16 @@ public class ProjectAdapter extends  RecyclerView.Adapter<ProjectAdapter.ViewHol
             requestLocation = itemView.findViewById(R.id.requestLocation);
             requestStartDate = itemView.findViewById(R.id.requestStartDate);
             requestDescription = itemView.findViewById(R.id.requestDescription);
-
-
+//            projectButton = itemView.findViewById(R.id.projectButton);
+//
+//
+//            projectButton.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(OngoingEvents.this, PaymentMethod.class);
+//                    startActivity(intent);
+//                }
+//            });
 
 
         }

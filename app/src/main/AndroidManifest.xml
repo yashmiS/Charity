@@ -52,6 +52,12 @@
             android:exported="true" />
         <activity
             android:name=".Request"
+            android:exported="true"/>
+        <activity
+            android:name=".Contactus"
+            android:exported="true"/>
+        <activity
+            android:name=".Feedback"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

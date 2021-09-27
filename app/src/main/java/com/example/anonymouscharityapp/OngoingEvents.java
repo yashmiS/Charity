@@ -39,6 +39,7 @@ public class OngoingEvents extends AppCompatActivity {
     private ProjectAdapter projectAdapter;
     private SearchView search;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

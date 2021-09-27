@@ -28,7 +28,7 @@ public class HelpCenter extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                String[] TO_EMAILS = {"healthlinelk@gmail.com"};
+                String[] TO_EMAILS = {"anonymoushope.sliit@gmail.com"};
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
 //                , Uri.parse("mailto:"+etTo.getText().toString()));
                 intent.setData(Uri.parse("mailto:"));
