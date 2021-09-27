@@ -3,10 +3,12 @@ package com.example.anonymouscharityapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,6 +23,7 @@ public class Registeruser extends AppCompatActivity implements View.OnClickListe
     private TextInputEditText Fullname, Email, NIC, Username, Pass;
     private Button regbutton;
     private FirebaseAuth mAuth;
+    private TextView loginpg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +36,24 @@ public class Registeruser extends AppCompatActivity implements View.OnClickListe
         NIC = findViewById(R.id.RegNIC);
         Username = findViewById(R.id.RegUsername);
         Pass = findViewById(R.id.RegPass);
+        loginpg = findViewById(R.id.logpage);
 
 
         regbutton = findViewById(R.id.regbutton);
         regbutton.setOnClickListener(this);
+
+
+        loginpg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent ( Registeruser.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
+
+
 
     @Override
     public void onClick(View view) {
@@ -95,13 +111,13 @@ public class Registeruser extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+               mAuth.createUserWithEmailAndPassword(email, password)
+                   .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if (task.isSuccessful()) {
-                            User user = new User(fullname, email, Nic, username);
+                            User user = new User(fullname, username, email, Nic);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -117,6 +133,8 @@ public class Registeruser extends AppCompatActivity implements View.OnClickListe
 
                                 }
                             });
+
+
 
 
                         }else{
