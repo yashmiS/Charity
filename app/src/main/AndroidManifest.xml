@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AnonymousCharityApp">
         <activity
+            android:name=".OngoingEvents"
+            android:exported="true"/>
+        <activity
             android:name=".HelpCenter"
             android:exported="true" />
         <activity
@@ -46,10 +49,10 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
-                android:name=".Request"
-                android:exported="true" >
+            android:name=".Request"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
