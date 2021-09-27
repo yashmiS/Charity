@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="deploymentTargetDropDown">
+    <targetSelectedWithDropDown>
+      <Target>
+        <type value="QUICK_BOOT_TARGET" />
+        <deviceKey>
+          <Key>
+            <type value="VIRTUAL_DEVICE_PATH" />
+            <value value="C:\Users\ACER\.android\avd\Pixel_2_API_27.avd" />
+
+            <value value="$USER_HOME$/.android/avd/Pixel_3a_XL_API_27.avd" />
+
+            <value value="C:\Users\ngt\.android\avd\Pixel_3a_XL_API_26.avd" />
+
+          </Key>
+        </deviceKey>
+      </Target>
+    </targetSelectedWithDropDown>
+
+    <timeTargetWasSelectedWithDropDown value="2021-09-23T09:21:54.802077400Z" />
+
+    <timeTargetWasSelectedWithDropDown value="2021-09-20T15:28:09.718859Z" />
+
+    <timeTargetWasSelectedWithDropDown value="2021-09-20T19:46:25.218918100Z" />
+
+
+  </component>
+</project>
