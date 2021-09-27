@@ -43,8 +43,35 @@
                 android:layout_height="wrap_content"
                 android:text="Make-A-Wish"
                 android:textStyle="italic"
-                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"
                 android:layout_marginTop="10dp"
+                android:gravity="center"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="User Name"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                >
+            </TextView>
+
+
+
+            <TextView
+                android:id="@+id/full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginTop="2dp"
                 android:gravity="center"
                 >
             </TextView>
