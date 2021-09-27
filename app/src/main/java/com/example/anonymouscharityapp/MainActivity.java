@@ -89,12 +89,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mauth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-               if(task.isSuccessful()){
-                   //redirect to home page
-                   startActivity(new Intent(MainActivity.this, Profile.class));
-               }else{
-                   Toast.makeText(MainActivity.this, "Failed to Login", Toast.LENGTH_LONG).show();
-               }
+                if(task.isSuccessful()){
+                    //redirect to home page
+                    startActivity(new Intent(MainActivity.this, Profile.class));
+                }else{
+                    Toast.makeText(MainActivity.this, "Failed to Login", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
