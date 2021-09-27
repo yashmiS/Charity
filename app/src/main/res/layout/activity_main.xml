@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_200"
     android:orientation="vertical"
     android:padding="20dp">
     tools:context=".loginactivity">
 
     <androidx.cardview.widget.CardView
+        android:layout_marginVertical="90dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="2dp"
+        android:elevation="10dp"
         app:cardCornerRadius="10dp"
-        app:cardElevation="10dp"
-        android:elevation="10dp">
+        app:cardElevation="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,25 +30,25 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="-20dp"
-                android:src="@drawable/logo"/>
+                android:src="@drawable/logo" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
                 android:text="Login"
                 android:textColor="#006699"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginTop="-10dp"
                 android:textSize="35sp"
-                android:layout_marginBottom="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:orientation="vertical"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
 
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -64,55 +66,52 @@
                         android:hint="Enter Email"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:drawableStart="@drawable/ic_email"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:boxStrokeColor="#000"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                    app:boxStrokeColor="#000">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/logpass"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Password"
                         android:layout_marginBottom="5dp"
                         android:drawablePadding="10dp"
+                        android:hint="Enter Password"
                         android:textColor="@color/black"
+                        android:textColorHint="@color/black"
                         android:textSize="18sp"
-                        android:textColorHint="@color/black"/>
+                        android:drawableStart="@drawable/ic_password"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
                     android:id="@+id/logbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="#A038EC"
+                    android:gravity="center"
                     android:text="Sign In"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="30dp"
-                    android:backgroundTint="#33cccc"
-                    android:layout_height="wrap_content"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/regpage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Don't have an account? Sign Up"
                     android:layout_marginTop="25dp"
                     android:gravity="center"
-                    android:textSize="17dp"/>
-
-
-
-
-
+                    android:text="Don't have an account? Sign Up"
+                    android:textSize="17dp"
+                    />
 
 
             </LinearLayout>
@@ -121,5 +120,7 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
+
 
 </LinearLayout>
