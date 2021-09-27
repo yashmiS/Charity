@@ -42,7 +42,8 @@
         android:id="@+id/button_upload"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/image_view"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="57dp"
         android:text="Upload" />
 </RelativeLayout>

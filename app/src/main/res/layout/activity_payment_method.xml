@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -79,7 +79,7 @@
                     android:layout_width="260dp"
                     android:layout_gravity="center"
                     android:layout_height="50dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="18dp"
                     android:layout_marginBottom="50dp"
                     android:gravity="center"
                     android:text="Payment Slip Upload"
@@ -88,6 +88,42 @@
                     android:textSize="20dp">
 
                 </Button>
+
+
+
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text=" If you want to delete Card Details from database"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="15dp"-->
+<!--                    android:layout_marginTop="-40dp"-->
+<!--                    android:gravity="center"-->
+<!--                    >-->
+<!--                </TextView>-->
+
+
+
+
+
+
+                <Button
+                  android:id="@+id/delete_details"
+                  android:layout_width="260dp"
+                  android:layout_gravity="center"
+                  android:layout_height="50dp"
+                  android:layout_marginTop="-30dp"
+                  android:layout_marginBottom="50dp"
+                  android:gravity="center"
+                  android:text="Delete Card Details "
+                  android:textAllCaps="false"
+                  android:textColor="#ffff"
+                  android:textSize="20dp">
+
+              </Button>
+
+
 
             </LinearLayout>
         </LinearLayout>
@@ -100,7 +136,7 @@
 
 
 
-    </LinearLayout>
+    </ScrollView>
 
 
 
