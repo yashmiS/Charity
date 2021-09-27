@@ -67,13 +67,13 @@ public class Settings extends AppCompatActivity {
 
 
 
-//        feedback.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(Settings.this,feedback.Class());
-//                  startActivity(intent);
-//            }
-//        });
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Settings.this,Feedback.class);
+                  startActivity(intent);
+            }
+        });
 
 
 

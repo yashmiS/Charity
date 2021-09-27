@@ -29,7 +29,7 @@ public class Feedback extends AppCompatActivity {
 
         mAuth=FirebaseAuth.getInstance();
         if(mAuth.getCurrentUser()==null){
-            startActivity(new Intent(Feedback.this, MyActivity.class));
+            startActivity(new Intent(Feedback.this, home.class));
         }
         userId = mAuth.getCurrentUser().getUid();
         fdname = findViewById(R.id.feedname);

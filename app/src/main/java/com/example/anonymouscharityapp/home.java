@@ -96,8 +96,7 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
             startActivity(new Intent(home.this, MainActivity.class));
         }
 
-        userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(
-                FirebaseAuth.getInstance().getCurrentUser().getUid());
+        userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
         userRef.addValueEventListener(new ValueEventListener() {
 
@@ -171,6 +170,31 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
 
                 Intent intent3 = new Intent(home.this,Request.class);
                 startActivity(intent3);
+                break;
+            case R.id.contactUs:
+
+                Intent intent4 = new Intent(home.this,Contactus.class);
+                startActivity(intent4);
+                break;
+            case R.id.compatible:
+
+                Intent intent5 = new Intent(home.this,Settings.class);
+                startActivity(intent5);
+                break;
+            case R.id.profile:
+
+                Intent intent6 = new Intent(home.this,Profile.class);
+                startActivity(intent6);
+                break;
+//            case R.id.blog:
+//
+//                Intent intent7 = new Intent(home.this,Blog.class);
+//                startActivity(intent7);
+//                break;
+            case R.id.feedback:
+
+                Intent intent8 = new Intent(home.this,Feedback.class);
+                startActivity(intent8);
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
