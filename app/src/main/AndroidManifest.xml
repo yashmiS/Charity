@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AnonymousCharityApp">
         <activity
+            android:name=".CompletedEvent"
+            android:exported="true" />
+        <activity
+            android:name=".Volunteers"
+            android:exported="true" />
+      <activity
             android:name=".OngoingEvents"
             android:exported="true"/>
         <activity

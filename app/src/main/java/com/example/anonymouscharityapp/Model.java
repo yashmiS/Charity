@@ -1,17 +1,29 @@
 package com.example.anonymouscharityapp;
 
 public class Model {
-    String name,amount,event;
+    String names,donations;
 
-    public String getName() {
-        return name;
+    public Model() {
     }
 
-    public String getAmount() {
-        return amount;
+    public Model(String names, String donations) {
+        this.names = names;
+        this.donations = donations;
     }
 
-    public String getEvent() {
-        return event;
+    public String getNames() {
+        return names;
+    }
+
+    public String getDonations() {
+        return donations;
+    }
+
+    public void setNames(String names) {
+        this.names = names;
+    }
+
+    public void setDonations(String donations) {
+        this.donations = donations;
     }
 }
