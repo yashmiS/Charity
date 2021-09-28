@@ -17,6 +17,18 @@
         <activity
             android:name=".Volunteers"
             android:exported="true" />
+      <activity
+            android:name=".OngoingEvents"
+            android:exported="true"/>
+        <activity
+            android:name=".HelpCenter"
+            android:exported="true" />
+        <activity
+            android:name=".PrivacyPolicy"
+            android:exported="true" />
+        <activity
+            android:name=".Settings"
+            android:exported="true" />
         <activity
             android:name=".Profile"
             android:exported="true" />
@@ -46,6 +58,12 @@
             android:exported="true" />
         <activity
             android:name=".Request"
+            android:exported="true"/>
+        <activity
+            android:name=".Contactus"
+            android:exported="true"/>
+        <activity
+            android:name=".Feedback"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

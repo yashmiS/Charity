@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B84AE6"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:padding="20dp">
+    android:background="#914CE6"
+    tools:context=".Feedback">
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="2dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
         android:background="@color/black"
         android:elevation="10dp">
 
@@ -38,23 +39,16 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
-                android:text="Register"
+                android:text="Give Us Your Feedback!"
                 android:textColor="#006699"
-                android:textSize="35sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/proimage"
-                android:layout_width="120dp"
-                android:layout_height="100dp"
-                android:src="@drawable/profile"
-                android:layout_gravity="center"
-                app:civ_border_color="#FF000000"
-                app:civ_border_width="2dp"
-                app:layout_constraintBottom_toTopOf="@+id/uploadbutton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ratestars"
+               android:layout_margin="7dp"/>
 
 
             <LinearLayout
@@ -71,12 +65,12 @@
                     app:boxStrokeColor="#000">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/RegFullname"
+                        android:id="@+id/feedname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:drawablePadding="10dp"
-                        android:hint="Enter Full Name"
+                        android:hint="Your Name"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
                         android:textSize="18sp" />
@@ -92,12 +86,12 @@
                     app:boxStrokeColor="#000">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/RegEmail"
+                        android:id="@+id/feedexp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:drawablePadding="10dp"
-                        android:hint="Enter Email"
+                        android:hint="Overall Experience"
                         android:inputType="textEmailAddress"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
@@ -114,78 +108,30 @@
                     app:boxStrokeColor="#000">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/RegNIC"
+                        android:id="@+id/feedsug"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:drawablePadding="10dp"
-                        android:hint="Enter NIC"
+                        android:hint="Feedback/Suggesions"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
                         android:textSize="18sp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:boxStrokeColor="#000">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/RegUsername"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:drawablePadding="10dp"
-                        android:hint="Enter Username"
-                        android:textColor="@color/black"
-                        android:textColorHint="@color/black"
-                        android:textSize="18sp" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:boxStrokeColor="#000">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/RegPass"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:drawablePadding="10dp"
-                        android:hint="Enter Password"
-                        android:textColor="@color/black"
-                        android:textColorHint="@color/black"
-                        android:textSize="18sp" />
-
-                </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
-                    android:id="@+id/regbutton"
+                    android:id="@+id/feedbtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:backgroundTint="#9728B6"
                     android:gravity="center"
-                    android:text="Sign Up"
+                    android:text="Submit"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-
-                <TextView
-                    android:id="@+id/logpage"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:text="Already Registered? Sign In"
-                    android:textSize="17sp" />
 
 
             </LinearLayout>
@@ -193,8 +139,6 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
-
 
 
 </ScrollView>

@@ -27,16 +27,26 @@ public class CardDetails extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseReference root;
     private String userId;
+    private Button Cancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_details);
 
+        Cancel = findViewById(R.id.Cancel);
+        Cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CardDetails.this,PaymentMethod.class);
+                startActivity(intent);
+            }
+        });
+
 
         mAuth = FirebaseAuth.getInstance();
-        if (mAuth.getCurrentUser() == null){
-            startActivity(new Intent(CardDetails.this,MainActivity.class));
+        if (mAuth.getCurrentUser() == null) {
+            startActivity(new Intent(CardDetails.this, MainActivity.class));
         }
         userId = mAuth.getCurrentUser().getUid();
         donation = findViewById(R.id.filledTextField01);
@@ -58,93 +68,45 @@ public class CardDetails extends AppCompatActivity {
                 String dates = date.getText().toString().trim();
                 String cvns = cvn.getText().toString().trim();
 
+                if (donations.isEmpty()) {
+                    donation.setError("Amount Required");
+                    donation.requestFocus();
+                    return;
+                }
+                if (names.isEmpty()) {
+                    name.setError("CardHolder Required");
+                    name.requestFocus();
+                    return;
+                }
 
-                Card card = new Card( donations,names,cards,dates,cvns);
+                if (cards.isEmpty()) {
+                    card.setError("Card number Required");
+                    card.requestFocus();
+                    return;
+                }
+                if (dates.isEmpty()) {
+                    date.setError("Date Required");
+                    date.requestFocus();
+                    return;
+                }
+                if (cvns.isEmpty()) {
+                    cvn.setError("CVN Required");
+                    cvn.requestFocus();
+                    return;
+                }
+
+
+                Card card = new Card(donations, names, cards, dates, cvns);
 
                 root.child("card details").child(userId).setValue(card).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-
+                        Toast.makeText(CardDetails.this, "Thank You!!!...", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(CardDetails.this, PaymentMethod.class));
                     }
                 });
 
             }
         });
     }
-
-
-
-
-
-
-//    private void donatebutton() {
-//
-//        String donations = donation.getText().toString().trim();
-//        String names = name.getText().toString().trim();
-//        String cards = card.getText().toString().trim();
-//        String dates = date.getText().toString().trim();
-//        String cvns = cvn.getText().toString().trim();
-//
-//
-//
-//        if (donations.isEmpty()) {
-//            donation.setError("Full Name Required");
-//            donation.requestFocus();
-//            return;
-//        }
-//        if (names.isEmpty()) {
-//            name.setError("Email Required");
-//            name.requestFocus();
-//            return;
-//        }
-//
-//
-//        if (cards.isEmpty()) {
-//            card.setError("NIC Required");
-//            card.requestFocus();
-//            return;
-//        }
-//        if (dates.isEmpty()) {
-//            date.setError("Username Required");
-//            date.requestFocus();
-//            return;
-//        }
-//        if (cvns.isEmpty()) {
-//            cvn.setError("Username Required");
-//            cvn.requestFocus();
-//            return;
-//        }
-//
-//        mAuth.createUserWithEmailAndPassword(cards, cvns)
-//                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//
-//                        if (task.isSuccessful()) {
-//                            Card card = new Card(donations, names, cards, dates, cvns);
-//
-//                            FirebaseDatabase.getInstance().getReference("Cards")
-//                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-//                                    .setValue(card).addOnCompleteListener(new OnCompleteListener<Void>() {
-//                                @Override
-//                                public void onComplete(@NonNull Task<Void> task) {
-//
-//                                    if (task.isSuccessful()) {
-//                                        Toast.makeText(CardDetails.this, "User Registered Successfully", Toast.LENGTH_LONG).show();
-//                                    } else {
-//                                        Toast.makeText(CardDetails.this, "Registration Failed", Toast.LENGTH_LONG).show();
-//                                    }
-//
-//                                }
-//                            });
-//                        }else{
-//                            Toast.makeText(CardDetails.this,"Registration Failed", Toast.LENGTH_LONG).show();
-//                        }
-//                    }
-//                });
-//
-//
-//
-//
-//    }
 }
