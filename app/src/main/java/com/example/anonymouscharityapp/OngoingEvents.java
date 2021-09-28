@@ -57,7 +57,7 @@ public class OngoingEvents extends AppCompatActivity {
 
         if (FirebaseAuth.getInstance().getCurrentUser() == null) {
             startActivity(new Intent(OngoingEvents.this, MainActivity.class));
-        }
+        }else {
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference()
                 .child("request");
@@ -79,6 +79,9 @@ public class OngoingEvents extends AppCompatActivity {
 
                         Project project = new Project(requestTitle, requestLocation, requestStartDate, requestDescription);
                         projectList.add(project);
+                        if (projectList.isEmpty()){
+                            Toast.makeText(OngoingEvents.this, "No Projects", Toast.LENGTH_SHORT).show();
+                        }
                     }
                     projectAdapter = new ProjectAdapter(OngoingEvents.this, projectList);
 
@@ -134,7 +137,7 @@ public class OngoingEvents extends AppCompatActivity {
                 return false;
             }
         });
-
+        }
 
     }
 

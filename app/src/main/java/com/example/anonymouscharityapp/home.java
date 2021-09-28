@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.bumptech.glide.Glide;
@@ -93,21 +94,23 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
         nav_user_name = nav_view.getHeaderView(0).findViewById(R.id.nav_user_name);
 
         if (FirebaseAuth.getInstance().getCurrentUser() == null) {
+            Toast.makeText(home.this, "Please Login", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(home.this, MainActivity.class));
-        }
+        }else {
 
-        userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
-        userRef.addValueEventListener(new ValueEventListener() {
+            userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()) {
-                    String name = snapshot.child("fullname").getValue().toString();
-                    nav_full_name.setText(name);
+            userRef.addValueEventListener(new ValueEventListener() {
 
-                    String username = snapshot.child("username").getValue().toString();
-                    nav_user_name.setText(username);
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (snapshot.exists()) {
+                        String name = snapshot.child("fullname").getValue().toString();
+                        nav_full_name.setText(name);
+
+                        String username = snapshot.child("username").getValue().toString();
+                        nav_user_name.setText(username);
 
 //                        if(snapshot.hasChild("imageUrl")){
 //                            String imageUrl = snapshot.child("imageUrl").getValue().toString();
@@ -117,14 +120,15 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
 //                        }
 
 
+                    }
                 }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
 
-            }
-        });
+                }
+            });
+        }
 
 
     }
@@ -186,15 +190,20 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
                 Intent intent6 = new Intent(home.this,Profile.class);
                 startActivity(intent6);
                 break;
-//            case R.id.blog:
-//
-//                Intent intent7 = new Intent(home.this,Blog.class);
-//                startActivity(intent7);
-//                break;
+            case R.id.blog:
+
+                Intent intent7 = new Intent(home.this,Blog.class);
+                startActivity(intent7);
+                break;
             case R.id.feedback:
 
                 Intent intent8 = new Intent(home.this,Feedback.class);
                 startActivity(intent8);
+                break;
+            case R.id.about:
+
+                Intent intent9 = new Intent(home.this,Donations.class);
+                startActivity(intent9);
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
