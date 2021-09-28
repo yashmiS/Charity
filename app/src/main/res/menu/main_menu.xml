@@ -31,11 +31,6 @@
                     android:icon="@drawable/ic_person"
                     android:title="Profile"/>
                 <item
-                    android:id="@+id/notification"
-                    android:icon="@drawable/ic_notifications"
-                    android:title="Completed Events"/>
-
-                <item
                     android:id="@+id/requestForm"
                     android:icon="@drawable/ic_form"
                     android:title="Request Form"/>

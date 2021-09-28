@@ -96,8 +96,8 @@ public class Settings extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Settings.this ,MainActivity.class);
-                startActivity(intent);
+               FirebaseAuth.getInstance().signOut();
+                Intent intent2 = new Intent(Settings.this,MainActivity.class);
             }
         });
 

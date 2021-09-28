@@ -98,7 +98,7 @@ public class ProjectAdapter extends  RecyclerView.Adapter<ProjectAdapter.ViewHol
         }
     };
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public CircleImageView imageProject;
         public TextView requestTitle, requestLocation, requestStartDate, requestDescription;
@@ -113,9 +113,9 @@ public class ProjectAdapter extends  RecyclerView.Adapter<ProjectAdapter.ViewHol
             requestLocation = itemView.findViewById(R.id.requestLocation);
             requestStartDate = itemView.findViewById(R.id.requestStartDate);
             requestDescription = itemView.findViewById(R.id.requestDescription);
-//            projectButton = itemView.findViewById(R.id.projectButton);
-//
-//
+            projectButton = itemView.findViewById(R.id.projectButton);
+
+            projectButton.setOnClickListener(this);
 //            projectButton.setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View v) {
@@ -127,6 +127,11 @@ public class ProjectAdapter extends  RecyclerView.Adapter<ProjectAdapter.ViewHol
 
         }
 
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(view.getContext(), PaymentMethod.class);
+            view.getContext().startActivity(intent);
+        }
     }
 
 
