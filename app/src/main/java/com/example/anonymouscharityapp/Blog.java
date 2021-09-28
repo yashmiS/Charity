@@ -29,12 +29,12 @@ public class Blog extends AppCompatActivity {
         button4= findViewById(R.id.coeButton4);
 
 
-    flipper = (ViewFlipper) findViewById(R.id.flipper);
+        flipper = (ViewFlipper) findViewById(R.id.flipper);
 
-    int imgarray[] = {R.drawable.animals,R.drawable.doggi,R.drawable.group,R.drawable.kids};
+        int imgarray[] = {R.drawable.animals,R.drawable.doggi,R.drawable.group,R.drawable.kids};
 
         for (int i=0;i<imgarray.length;i++)
-    showimage(imgarray[i]);
+            showimage(imgarray[i]);
 
 
         button2.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +45,7 @@ public class Blog extends AppCompatActivity {
 
             }
         });
-}
+    }
 
     public void showimage(int img){
 
