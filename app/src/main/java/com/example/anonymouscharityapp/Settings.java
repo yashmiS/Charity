@@ -63,10 +63,6 @@ public class Settings extends AppCompatActivity {
           });
         }
 
-
-
-
-
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,8 +70,6 @@ public class Settings extends AppCompatActivity {
                   startActivity(intent);
             }
         });
-
-
 
         help.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,8 +90,8 @@ public class Settings extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               FirebaseAuth.getInstance().signOut();
-                Intent intent2 = new Intent(Settings.this,MainActivity.class);
+                Intent intent = new Intent(Settings.this,MainActivity.class);
+                startActivity(intent);
             }
         });
 
