@@ -121,7 +121,8 @@ public class Request extends AppCompatActivity {
 
 
                 Req req = new Req (title,location,startDate,person,contact,description,email);
-                root.child("request").child(userId).setValue(req).addOnSuccessListener(new OnSuccessListener<Void>() {
+               String reqId = userId+contact;
+                root.child("request").child(userId).child(reqId).setValue(req).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
                         Toast.makeText(Request.this, "Thank You!!!...", Toast.LENGTH_SHORT).show();

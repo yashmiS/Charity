@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="18dp"
-        android:text="Donations"
+        android:text="Volunteers"
         android:textColor="#FFEB3B"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -34,7 +34,7 @@
         app:srcCompat="@drawable/logo" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleView"
+        android:id="@+id/recycleView2"
         android:layout_width="409dp"
         android:layout_height="659dp"
         android:layout_marginStart="1dp"
@@ -45,5 +45,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
