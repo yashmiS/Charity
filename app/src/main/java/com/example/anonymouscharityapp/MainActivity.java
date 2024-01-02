@@ -13,6 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -86,18 +88,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             logPassword.requestFocus();
             return;
         }
-
-        mauth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        mauth.signInWithEmailAndPassword(email, pass).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    //redirect to home page
-                    startActivity(new Intent(MainActivity.this, home.class));
-                }else{
-                    Toast.makeText(MainActivity.this, "Failed to Login", Toast.LENGTH_LONG).show();
-                }
+            public void onSuccess(AuthResult authResult) {
+                Toast.makeText(MainActivity.this, "Login in Success", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(MainActivity.this, home.class));
+                finish();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(MainActivity.this, "Failed to Login", Toast.LENGTH_LONG).show();
             }
         });
 
+//        mauth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//            @Override
+//            public void onComplete(@NonNull Task<AuthResult> task) {
+//                if(task.isSuccessful()){
+//                    //redirect to home page
+//                    startActivity(new Intent(MainActivity.this, home.class));
+//                }else{
+//                    Toast.makeText(MainActivity.this, "Failed to Login", Toast.LENGTH_LONG).show();
+//                }
+//            }
+//        });
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(MainActivity.this, "Please Login First", Toast.LENGTH_SHORT).show();
     }
 }

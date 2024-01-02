@@ -19,6 +19,7 @@ public class PaymentMethod extends AppCompatActivity {
     private Button method1;
     private Button method2;
     private Button delete;
+    private Button back;
     private DatabaseReference root;
     private String userId;
     private FirebaseAuth mAuth;
@@ -31,6 +32,7 @@ public class PaymentMethod extends AppCompatActivity {
         method1 = findViewById(R.id.method1Button);
         method2 = findViewById(R.id.method2Button);
         delete = findViewById(R.id.delete_details);
+        back = findViewById(R.id.back_p);
         mAuth = FirebaseAuth.getInstance();
         if (mAuth.getCurrentUser() == null) {
             startActivity(new Intent(PaymentMethod.this, MainActivity.class));
@@ -62,6 +64,16 @@ public class PaymentMethod extends AppCompatActivity {
                 alertDialog.setTitle("Delete Card Details");
                 alertDialog.show();
 
+            }
+        });
+
+
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PaymentMethod.this,home.class);
+                startActivity(intent);
             }
         });
 

@@ -28,9 +28,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder,int position){
         Model model = mList.get(position);
-        holder.name.setText(model.getName());
-        holder.amount.setText(model.getAmount());
-        holder.event.setText(model.getEvent());
+        holder.names.setText(model.getNames());
+        holder.donations.setText(model.getDonations());
+
 
 
     }
@@ -41,15 +41,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView name,amount,event;
+        TextView names,donations;
 
         public MyViewHolder(@NonNull View itemView){
 
             super(itemView);
 
-            name = itemView.findViewById(R.id.name_text);
-            amount = itemView.findViewById(R.id.amount_text);
-            event = itemView.findViewById(R.id.event_text);
+            names = itemView.findViewById(R.id.name_text2);
+            donations = itemView.findViewById(R.id.amount_text2);
+
 
 
         }

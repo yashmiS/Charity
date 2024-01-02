@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AnonymousCharityApp">
         <activity
+            android:name=".CompletedEvent"
+            android:exported="true" />
+        <activity
+            android:name=".Volunteers"
+            android:exported="true" />
+      <activity
             android:name=".OngoingEvents"
             android:exported="true"/>
         <activity
@@ -48,9 +54,6 @@
             android:name=".Registeruser"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true" />
-        <activity
             android:name=".Request"
             android:exported="true"/>
         <activity
@@ -58,7 +61,11 @@
             android:exported="true"/>
         <activity
             android:name=".Feedback"
-            android:exported="true">
+            android:exported="true"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

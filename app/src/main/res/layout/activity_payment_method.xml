@@ -25,7 +25,11 @@
             android:layout_margin="10dp"
             android:orientation="vertical">
 
-
+            <Button
+                android:layout_width="50dp"
+                android:id="@+id/back_p"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_p"/>
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="250dp"

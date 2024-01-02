@@ -13,7 +13,6 @@ public class Blog extends AppCompatActivity {
 
     private Button button1;
     private Button button2;
-    private Button button3;
     private Button button4;
 
     ViewFlipper flipper;
@@ -25,7 +24,6 @@ public class Blog extends AppCompatActivity {
 
         button1= findViewById(R.id.voButton);
         button2= findViewById(R.id.doButton3);
-        button3= findViewById(R.id.coButton2);
         button4= findViewById(R.id.coeButton4);
 
 
@@ -45,7 +43,29 @@ public class Blog extends AppCompatActivity {
 
             }
         });
+
     }
+
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Blog.this,Volunteers.class);
+                startActivity(intent);
+
+            }
+        });
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Blog.this,CompletedEvent.class);
+                startActivity(intent);
+
+            }
+        });
+}
+
 
     public void showimage(int img){
 
